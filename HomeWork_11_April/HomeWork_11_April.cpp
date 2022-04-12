@@ -37,36 +37,36 @@
 //Ввод : 5 1
 //Вывод : 5 4 3 2 1
 
-#include <iostream>
-
-using namespace std;
-void between(int A, int B)
-{
-	
-	if (A == B)
-		{
-			cout << A << " ";
-			return;
-		}
-	else if(A < B)
-		{
-		between(A , B-1);
-			cout << B << " ";
-		}
-	else if (A > B)
-	{
-		between(A, B+1);
-		cout << B << " ";
-		
-	}
-		
-}
-int main()
-{
-	between(1, 6);
-	cout << "\n";
-	between(8,1);
-}
+//#include <iostream>
+//
+//using namespace std;
+//void between(int A, int B)
+//{
+//	
+//	if (A == B)
+//		{
+//			cout << A << " ";
+//			return;
+//		}
+//	else if(A < B)
+//		{
+//		between(A , B-1);
+//			cout << B << " ";
+//		}
+//	else if (A > B)
+//	{
+//		between(A, B+1);
+//		cout << B << " ";
+//		
+//	}
+//		
+//}
+//int main()
+//{
+//	between(1, 6);
+//	cout << "\n";
+//	between(8,1);
+//}
 
 	//3. Точная степень двойки.
 	//Дано натуральное число N.Выведите слово YES, если число N является точной степенью двойки,
@@ -74,6 +74,43 @@ int main()
 	//Операцией возведения в степень пользоваться нельзя!
 	//Ввод : 3 8
 	//Вывод : NO YES
+
+#include <iostream>
+
+using namespace std;
+
+void fun(int m, int i)
+{
+	if (m == 2 && i == 1)
+	{
+		//cout << m << " ";
+		cout << "YES";
+		return ;
+	}
+	else if (m % 2 != 0 && i != 1)
+	{
+		cout << "NO";
+		return;
+	}
+	else
+	{
+		fun(m / 2, i - 1);
+		//cout << m << " ";
+	}
+}
+
+int main()
+{
+	fun(16, 4);
+	cout << "\n";
+	fun(15, 4);
+	cout << "\n";
+	fun(16, 3);
+	cout << "\n";
+	int a, b;
+	cin >> a >> b;
+	fun(a, b);
+}
 
 	//4. Сумма цифр числа.
 	//Дано натуральное число N.Вычислите сумму его цифр.

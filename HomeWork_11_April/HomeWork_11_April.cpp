@@ -3,28 +3,28 @@
 //Ввод: 5
 //Вывод : 1 2 3 4 5
 
-#include <iostream>
-
-using namespace std;
-
-void fun(int m)
-{
-	if (m == 1)
-	{
-		cout << m << " ";
-		return;
-	}
-	else
-	{
-		fun(m - 1);
-		cout << m << " ";
-	}
-}
-
-int main()
-{
-	fun(5);
-}
+//#include <iostream>
+//
+//using namespace std;
+//
+//void fun(int m)
+//{
+//	if (m == 1)
+//	{
+//		cout << m << " ";
+//		return;
+//	}
+//	else
+//	{
+//		fun(m - 1);
+//		cout << m << " ";
+//	}
+//}
+//
+//int main()
+//{
+//	fun(5);
+//}
 	/*int n;
 	cout << "Enter number\n";
 	cin >> n;
@@ -37,19 +37,36 @@ int main()
 //Ввод : 5 1
 //Вывод : 5 4 3 2 1
 
-//#include <iostream>
-//
-//using namespace std;
-//int A = 5;
-//int main()
-//{
-//	int local = A;
-//	cout << A << endl;
-//	A--;
-//	int B = 1;
-//	if (A < B) return B;
-//	main();
-//}
+#include <iostream>
+
+using namespace std;
+void between(int A, int B)
+{
+	
+	if (A == B)
+		{
+			cout << A << " ";
+			return;
+		}
+	else if(A < B)
+		{
+		between(A , B-1);
+			cout << B << " ";
+		}
+	else if (A > B)
+	{
+		between(A, B+1);
+		cout << B << " ";
+		
+	}
+		
+}
+int main()
+{
+	between(1, 6);
+	cout << "\n";
+	between(8,1);
+}
 
 	//3. Точная степень двойки.
 	//Дано натуральное число N.Выведите слово YES, если число N является точной степенью двойки,

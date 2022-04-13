@@ -119,32 +119,32 @@
 	//Ввод : 179
 	//Вывод : 17
 
-#include <iostream>
-using namespace std;
-int sum;
-void summa(int num)
-{
-	int local = sum;
-	int dig=0;
-	if (num < 10)
-	{
-		sum = sum + num % 10;;
-		cout << sum;
-		return;
-	}
-	else
-	{
-		dig = num % 10;
-		sum += dig;
-		summa( num / 10);
-	}
-}
-int main()
-{
-	int n;
-	cin >> n;
-	summa(n);
-}
+//#include <iostream>
+//using namespace std;
+//int sum;
+//void summa(int num)
+//{
+//	int local = sum;
+//	int dig=0;
+//	if (num < 10)
+//	{
+//		sum = sum + num % 10;;
+//		cout << sum;
+//		return;
+//	}
+//	else
+//	{
+//		dig = num % 10;
+//		sum += dig;
+//		summa( num / 10);
+//	}
+//}
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	summa(n);
+//}
 
 
 	//5. Цифры числа справа налево.
@@ -155,6 +155,7 @@ int main()
 	//Ввод : 179
 	//Вывод : 9 7 1
 	 
+
 	
 	//6. Цифры числа слева направо.
 	//Дано натуральное число N.Выведите все его цифры по одной, в обычном порядке, разделяя их 
@@ -163,3 +164,29 @@ int main()
 	// Разрешена только рекурсия и целочисленная арифметика.
 	//Ввод : 179
 	//Вывод : 1 7 9
+
+#include <iostream>
+using namespace std;
+int sum;
+void summa(int num)
+{
+	int local = sum;
+	int dig = 0;
+	if (num < 10)
+	{
+		cout << num << " ";
+		return;
+	}
+	else
+	{
+		dig = num % 10;
+		cout << dig << " ";
+		summa(num / 10);
+	}
+}
+int main()
+{
+	int n;
+	cin >> n;
+	summa(n);
+}

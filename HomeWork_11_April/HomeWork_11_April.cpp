@@ -75,42 +75,42 @@
 	//Ввод : 3 8
 	//Вывод : NO YES
 
-#include <iostream>
-
-using namespace std;
-
-void fun(int m, int i)
-{
-	if (m == 2 && i == 1)
-	{
-		//cout << m << " ";
-		cout << "YES";
-		return ;
-	}
-	else if (m % 2 != 0 && i != 1)
-	{
-		cout << "NO";
-		return;
-	}
-	else
-	{
-		fun(m / 2, i - 1);
-		//cout << m << " ";
-	}
-}
-
-int main()
-{
-	fun(16, 4);
-	cout << "\n";
-	fun(15, 4);
-	cout << "\n";
-	fun(16, 3);
-	cout << "\n";
-	int a, b;
-	cin >> a >> b;
-	fun(a, b);
-}
+//#include <iostream>
+//
+//using namespace std;
+//
+//void fun(int m, int i)
+//{
+//	if (m == 2 && i == 1)
+//	{
+//		//cout << m << " ";
+//		cout << "YES";
+//		return ;
+//	}
+//	else if (m % 2 != 0 && i != 1)
+//	{
+//		cout << "NO";
+//		return;
+//	}
+//	else
+//	{
+//		fun(m / 2, i - 1);
+//		//cout << m << " ";
+//	}
+//}
+//
+//int main()
+//{
+//	fun(16, 4);
+//	cout << "\n";
+//	fun(15, 4);
+//	cout << "\n";
+//	fun(16, 3);
+//	cout << "\n";
+//	int a, b;
+//	cin >> a >> b;
+//	fun(a, b);
+//}
 
 	//4. Сумма цифр числа.
 	//Дано натуральное число N.Вычислите сумму его цифр.
@@ -118,6 +118,34 @@ int main()
 	// глобальные переменные(ну и циклы, разумеется).
 	//Ввод : 179
 	//Вывод : 17
+
+#include <iostream>
+using namespace std;
+int sum;
+void summa(int num)
+{
+	int local = sum;
+	int dig=0;
+	if (num < 10)
+	{
+		sum = sum + num % 10;;
+		cout << sum;
+		return;
+	}
+	else
+	{
+		dig = num % 10;
+		sum += dig;
+		summa( num / 10);
+	}
+}
+int main()
+{
+	int n;
+	cin >> n;
+	summa(n);
+}
+
 
 	//5. Цифры числа справа налево.
 	//Дано натуральное число N.Выведите все его цифры по одной, в обратном порядке,

@@ -167,10 +167,9 @@
 
 #include <iostream>
 using namespace std;
-int sum;
+
 void summa(int num)
 {
-	int local = sum;
 	int dig = 0;
 	if (num < 10)
 	{

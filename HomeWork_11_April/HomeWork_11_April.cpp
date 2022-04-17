@@ -190,33 +190,21 @@
 
 #include <iostream>
 using namespace std;
-int h=0;
-void summa(int num)
+
+void rev(int n)
 {
-	int local = h;
-	h = 10000;
-	int dig = 0;
-	if (num < 10)
+	if (n > 0)
 	{
-		//cout << dig << " ";
-		return;
+		int mod = n % 10;
+		n = n / 10;
+		rev(n);
+		cout << mod << " ";
 	}
-	else
-	{
-		dig = num / h;
-		//cout << dig << " ";
-		dig = dig % 10;
-		cout << dig << " ";
-		h = h / 10;
-		summa(num*10);
-		
-		return;
-	}
-	
 }
 int main()
 {
 	int n;
 	cin >> n;
-	summa(n);
+	rev(n);
 }
+

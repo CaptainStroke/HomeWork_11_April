@@ -188,23 +188,23 @@
 	//Ввод : 179
 	//Вывод : 1 7 9
 
-#include <iostream>
-using namespace std;
-
-void rev(int n)
-{
-	if (n > 0)
-	{
-		int mod = n % 10;
-		n = n / 10;
-		rev(n);
-		cout << mod << " ";
-	}
-}
-int main()
-{
-	int n;
-	cin >> n;
-	rev(n);
-}
+//#include <iostream>
+//using namespace std;
+//
+//void rev(int n)
+//{
+//	if (n > 0)
+//	{
+//		int mod = n % 10;
+//		n = n / 10;
+//		rev(n);
+//		cout << mod << " ";
+//	}
+//}
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	rev(n);
+//}
 
